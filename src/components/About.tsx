@@ -27,8 +27,8 @@ const About = () => {
             className="glass rounded-2xl p-8"
           >
             <div className="flex flex-col items-center text-center">
-              <div className="w-48 h-48 rounded-2xl gradient-primary flex items-center justify-center shadow-2xl mb-6">
-                <User className="text-primary-foreground" size={80} />
+              <div className="w-32 h-32 rounded-full gradient-primary flex items-center justify-center shadow-2xl mb-6 border-4 border-primary/20">
+                <User className="text-primary-foreground" size={48} />
               </div>
               <h3 className="text-2xl font-bold mb-2">Javeria Hassan</h3>
               <p className="text-accent font-semibold mb-4">Co-Founder & AI/ML Engineer</p>
@@ -49,8 +49,8 @@ const About = () => {
             className="glass rounded-2xl p-8"
           >
             <div className="flex flex-col items-center text-center">
-              <div className="w-48 h-48 rounded-2xl gradient-primary flex items-center justify-center shadow-2xl mb-6">
-                <User className="text-primary-foreground" size={80} />
+              <div className="w-32 h-32 rounded-full gradient-primary flex items-center justify-center shadow-2xl mb-6 border-4 border-primary/20">
+                <User className="text-primary-foreground" size={48} />
               </div>
               <h3 className="text-2xl font-bold mb-2">Jaweria Sohail</h3>
               <p className="text-accent font-semibold mb-4">Co-Founder & Software Consultant</p>
