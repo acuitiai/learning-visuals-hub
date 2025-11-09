@@ -41,7 +41,7 @@ const Header = () => {
         isScrolled ? "glass shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-4 md:py-4 pt-6">
         <div className="flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0 }}
@@ -95,7 +95,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-4 flex flex-col gap-4"
+            className="md:hidden mt-4 flex flex-col gap-4 bg-background/95 backdrop-blur-lg p-4 rounded-lg shadow-lg border border-border"
           >
             {menuItems.map((item) => (
               <button
