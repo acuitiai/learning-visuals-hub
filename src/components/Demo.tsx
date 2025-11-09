@@ -36,33 +36,6 @@ const Demo = () => {
               muted
               loop
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent flex items-end justify-center p-8">
-              <div className="w-full max-w-2xl">
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                  className="text-lg font-semibold text-center mb-4"
-                >
-                  Coming Soon — Upload your script and watch your first AI-generated lesson
-                  video unfold.
-                </motion.p>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.7 }}
-                  className="space-y-2"
-                >
-                  <div className="flex items-center justify-between text-sm">
-                    <span>Generating video...</span>
-                    <span className="text-primary font-semibold">75%</span>
-                  </div>
-                  <Progress value={75} className="h-2" />
-                </motion.div>
-              </div>
-            </div>
           </div>
 
           <motion.div
