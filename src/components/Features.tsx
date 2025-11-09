@@ -1,26 +1,34 @@
 import { motion } from "framer-motion";
 import { Brain, Clapperboard, Volume2, Palette } from "lucide-react";
+import aiScriptImg from "@/assets/feature-ai-script.jpg";
+import animationImg from "@/assets/feature-animation.jpg";
+import voiceoverImg from "@/assets/feature-voiceover.jpg";
+import brandingImg from "@/assets/feature-branding.jpg";
 
 const features = [
   {
     icon: Brain,
     title: "AI Script Understanding",
     description: "Extracts key ideas and structures them visually.",
+    image: aiScriptImg,
   },
   {
     icon: Clapperboard,
     title: "Scene & Animation Generation",
     description: "Converts text into explainable motion scenes.",
+    image: animationImg,
   },
   {
     icon: Volume2,
     title: "Voiceover Synchronization",
     description: "Syncs narration perfectly with visuals.",
+    image: voiceoverImg,
   },
   {
     icon: Palette,
     title: "Custom Branding",
     description: "Personalize visuals, colors, and tone.",
+    image: brandingImg,
   },
 ];
 
@@ -68,10 +76,18 @@ const Features = () => {
 
                 <div className="flex-1">
                   <motion.div
-                    animate={{ y: [0, -20, 0] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                    className="w-full aspect-square rounded-2xl gradient-primary opacity-20"
-                  />
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="w-full aspect-square rounded-2xl overflow-hidden shadow-2xl"
+                  >
+                    <img 
+                      src={feature.image} 
+                      alt={feature.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </motion.div>
                 </div>
               </motion.div>
             );
