@@ -47,9 +47,33 @@ const Header = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-2xl font-bold text-gradient"
+            className="flex items-center gap-2"
           >
-            Auto Animate
+            {/* Stylized A Logo */}
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: "#E9B7D1", stopOpacity: 1 }} />
+                  <stop offset="50%" style={{ stopColor: "#9b87f5", stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: "#6E59A5", stopOpacity: 1 }} />
+                </linearGradient>
+              </defs>
+              {/* Outer chevron */}
+              <path 
+                d="M 20 8 L 32 28 L 28 28 L 20 16 L 12 28 L 8 28 Z" 
+                fill="url(#logoGradient)"
+              />
+              {/* Inner chevron */}
+              <path 
+                d="M 20 16 L 26 26 L 14 26 Z" 
+                fill="url(#logoGradient)"
+                opacity="0.6"
+              />
+            </svg>
+            <span className="text-2xl font-bold">
+              <span className="text-gradient">auto</span>{" "}
+              <span className="text-gradient italic font-light">animate</span>
+            </span>
           </motion.div>
 
           {/* Desktop Menu */}
