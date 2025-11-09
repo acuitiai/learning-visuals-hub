@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Users } from "lucide-react";
+import { User } from "lucide-react";
 
 const About = () => {
   return (
@@ -17,50 +17,63 @@ const About = () => {
           </h2>
         </motion.div>
 
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          {/* Founder 1 - Javeria Hassan */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="glass rounded-2xl p-8"
+          >
+            <div className="flex flex-col items-center text-center">
+              <div className="w-48 h-48 rounded-2xl gradient-primary flex items-center justify-center shadow-2xl mb-6">
+                <User className="text-primary-foreground" size={80} />
+              </div>
+              <h3 className="text-2xl font-bold mb-2">Javeria Hassan</h3>
+              <p className="text-accent font-semibold mb-4">Co-Founder & AI/ML Engineer</p>
+              <p className="text-muted-foreground leading-relaxed">
+                AI/ML Engineer with 4+ years of experience in generative AI, LLM agents, and
+                educational automation, having worked with UK-based firms. Passionate about
+                leveraging AI to transform how we teach and learn.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Founder 2 - Jaweria Sohail */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="glass rounded-2xl p-8"
+          >
+            <div className="flex flex-col items-center text-center">
+              <div className="w-48 h-48 rounded-2xl gradient-primary flex items-center justify-center shadow-2xl mb-6">
+                <User className="text-primary-foreground" size={80} />
+              </div>
+              <h3 className="text-2xl font-bold mb-2">Jaweria Sohail</h3>
+              <p className="text-accent font-semibold mb-4">Co-Founder & Software Consultant</p>
+              <p className="text-muted-foreground leading-relaxed">
+                Software Consultant at a US-based company, specializing in scalable systems and
+                product strategy. Dedicated to building innovative solutions that make education
+                more accessible and engaging.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-6xl mx-auto"
+          transition={{ delay: 0.6 }}
+          className="text-center mt-12"
         >
-          <div className="glass rounded-2xl p-8 md:p-12">
-            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              {/* Profile Icon Column */}
-              <div className="flex-shrink-0">
-                <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl gradient-primary flex items-center justify-center shadow-2xl">
-                  <Users className="text-primary-foreground" size={96} />
-                </div>
-              </div>
-
-              {/* Text Content Column */}
-              <div className="flex-1 space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Auto Animate is founded by{" "}
-                  <span className="text-foreground font-semibold">Javeria Hassan</span> and{" "}
-                  <span className="text-foreground font-semibold">Jaweria Sohail</span> — two
-                  engineers passionate about AI and education.
-                </p>
-
-                <p>
-                  <span className="text-foreground font-semibold">Javeria</span> is an AI/ML
-                  Engineer with 4+ years of experience in generative AI, LLM agents, and
-                  educational automation, having worked with UK-based firms.
-                </p>
-
-                <p>
-                  <span className="text-foreground font-semibold">Jaweria</span> is a Software
-                  Consultant at a US-based company, specializing in scalable systems and product
-                  strategy.
-                </p>
-
-                <p className="text-foreground text-xl font-semibold">
-                  Together, they're reimagining how knowledge is shared — making learning visual,
-                  explainable, and accessible for everyone.
-                </p>
-              </div>
-            </div>
-          </div>
+          <p className="text-xl font-semibold">
+            Together, they're reimagining how knowledge is shared — making learning visual,
+            explainable, and accessible for everyone.
+          </p>
         </motion.div>
       </div>
     </section>
