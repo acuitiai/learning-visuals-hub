@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Play } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { Sparkles, Play, BookOpen, Lightbulb, Brain, GraduationCap, Cpu, Network } from "lucide-react";
 
 const Hero = () => {
   const scrollToDemo = () => {
@@ -11,18 +10,48 @@ const Hero = () => {
     }
   };
 
+  const floatingIcons = [
+    { Icon: BookOpen, delay: 0, duration: 20, x: "10%", y: "20%" },
+    { Icon: Lightbulb, delay: 2, duration: 25, x: "80%", y: "15%" },
+    { Icon: Brain, delay: 4, duration: 22, x: "15%", y: "70%" },
+    { Icon: GraduationCap, delay: 1, duration: 28, x: "85%", y: "65%" },
+    { Icon: Cpu, delay: 3, duration: 24, x: "25%", y: "40%" },
+    { Icon: Network, delay: 5, duration: 26, x: "75%", y: "50%" },
+    { Icon: BookOpen, delay: 6, duration: 23, x: "50%", y: "80%" },
+    { Icon: Brain, delay: 7, duration: 27, x: "60%", y: "25%" },
+  ];
+
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `url(${heroBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background/95 to-primary/5"
     >
+      {/* Animated Background Icons */}
+      <div className="absolute inset-0 overflow-hidden">
+        {floatingIcons.map((item, index) => (
+          <motion.div
+            key={index}
+            className="absolute opacity-10"
+            style={{ left: item.x, top: item.y }}
+            animate={{
+              y: [0, -30, 0],
+              x: [0, 15, 0],
+              rotate: [0, 10, -10, 0],
+            }}
+            transition={{
+              duration: item.duration,
+              delay: item.delay,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <item.Icon size={48} className="text-primary" />
+          </motion.div>
+        ))}
+      </div>
+
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
