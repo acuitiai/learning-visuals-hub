@@ -71,7 +71,7 @@ const Pricing = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
-              className={`glass rounded-2xl p-8 ${
+              className={`glass rounded-2xl p-8 flex flex-col ${
                 plan.highlight
                   ? "border-2 border-primary shadow-2xl shadow-primary/20"
                   : ""
@@ -90,7 +90,7 @@ const Pricing = () => {
               </div>
               <p className="text-muted-foreground mb-6">{plan.description}</p>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-1">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
                     <Check className="text-primary flex-shrink-0 mt-0.5" size={20} />
