@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Sparkles, Play, BookOpen, Lightbulb, Brain, GraduationCap, Cpu, Network } from "lucide-react";
+import heroTechBg from "@/assets/hero-tech-bg.jpg";
 
 const Hero = () => {
   const scrollToDemo = () => {
@@ -24,10 +25,25 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background/95 to-primary/5"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
+      {/* Animated Background Image */}
+      <motion.div 
+        className="absolute inset-0 z-0"
+        initial={{ scale: 1.1, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 2, ease: "easeOut" }}
+      >
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroTechBg})` }}
+        />
+        {/* Overlay for theme blending */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/90 to-background" />
+      </motion.div>
+
       {/* Animated Background Icons */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-10">
         {floatingIcons.map((item, index) => (
           <motion.div
             key={index}
@@ -50,10 +66,7 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
-
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
