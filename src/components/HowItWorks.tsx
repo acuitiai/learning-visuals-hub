@@ -57,7 +57,7 @@ const HowItWorks = () => {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="relative"
                 >
-                  <div className="glass rounded-2xl p-6 text-center hover:shadow-xl transition-shadow relative z-10">
+                  <div className="glass rounded-2xl p-6 text-center hover:shadow-xl transition-shadow relative z-10 h-full">
                     <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-primary flex items-center justify-center">
                       <Icon className="text-primary-foreground" size={32} />
                     </div>
