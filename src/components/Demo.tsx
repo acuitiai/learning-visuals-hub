@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Progress } from "@/components/ui/progress";
-import demoPlaceholder from "@/assets/demo-placeholder.jpg";
 
 const Demo = () => {
   return (
@@ -29,10 +28,13 @@ const Demo = () => {
           className="max-w-5xl mx-auto"
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border">
-            <img
-              src={demoPlaceholder}
-              alt="Demo Preview"
+            <video
+              src="https://acuiti.ai/assets/images/ai/Regression%20Trees,%20Clearly%20Explained!!!.mp4"
               className="w-full h-auto"
+              controls
+              autoPlay
+              muted
+              loop
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent flex items-end justify-center p-8">
               <div className="w-full max-w-2xl">
