@@ -121,7 +121,7 @@ const Hero = () => {
         }} transition={{
           duration: 0.8,
           delay: 0.2
-        }} className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        }} className="text-5xl md:text-7xl font-bold mb-6 leading-tight mt-8">
             Turn Lessons into{" "}
             <span className="text-gradient">Animated Explainers</span> — Instantly.
           </motion.h1>
