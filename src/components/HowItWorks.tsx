@@ -26,7 +26,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-24">
+    <section id="how-it-works" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -35,7 +35,9 @@ const HowItWorks = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">How It Works</h2>
+          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4">
+            How It <span className="text-gradient">Works</span>
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             From idea to animation in just four simple steps.
           </p>
@@ -57,8 +59,8 @@ const HowItWorks = () => {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="relative"
                 >
-                  <div className="glass rounded-2xl p-6 text-center hover:shadow-xl transition-shadow relative z-10 h-full">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-primary flex items-center justify-center">
+                  <div className="glass rounded-2xl p-6 text-center hover:neon-border hover-lift transition-all relative z-10 h-full group">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-primary flex items-center justify-center group-hover:animate-pulse-glow">
                       <Icon className="text-primary-foreground" size={32} />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">{step.title}</h3>

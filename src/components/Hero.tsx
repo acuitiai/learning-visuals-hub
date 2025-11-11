@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Play, BookOpen, Lightbulb, Brain, GraduationCap, Cpu, Network } from "lucide-react";
 import heroTechBg from "@/assets/hero-tech-bg.jpg";
+import FloatingParticles from "./FloatingParticles";
+
 const Hero = () => {
   const scrollToDemo = () => {
     const element = document.querySelector("#demo");
@@ -11,6 +13,7 @@ const Hero = () => {
       });
     }
   };
+
   const floatingIcons = [{
     Icon: BookOpen,
     delay: 0,
@@ -60,6 +63,7 @@ const Hero = () => {
     x: "60%",
     y: "25%"
   }];
+
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background Image */}
       <motion.div className="absolute inset-0 z-0" initial={{
@@ -72,16 +76,19 @@ const Hero = () => {
       duration: 2,
       ease: "easeOut"
     }}>
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{
         backgroundImage: `url(${heroTechBg})`
       }} />
-        {/* Overlay for theme blending */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/90 to-background" />
+        {/* Dark overlay with gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background" />
       </motion.div>
+
+      {/* Floating AI Particles */}
+      <FloatingParticles />
 
       {/* Animated Background Icons */}
       <div className="absolute inset-0 overflow-hidden z-10">
-        {floatingIcons.map((item, index) => <motion.div key={index} className="absolute opacity-10" style={{
+        {floatingIcons.map((item, index) => <motion.div key={index} className="absolute opacity-5" style={{
         left: item.x,
         top: item.y
       }} animate={{
@@ -94,7 +101,7 @@ const Hero = () => {
         repeat: Infinity,
         ease: "easeInOut"
       }}>
-            <item.Icon size={48} className="text-primary" />
+            <item.Icon size={64} className="text-primary" />
           </motion.div>)}
       </div>
 
@@ -109,7 +116,9 @@ const Hero = () => {
         }} transition={{
           duration: 0.8
         }} className="mb-6">
-            
+            <span className="inline-block px-6 py-2 rounded-full glass neon-border text-sm font-medium text-foreground tracking-wider uppercase mb-4">
+              Innovate with Intelligence
+            </span>
           </motion.div>
 
           <motion.h1 initial={{
@@ -121,7 +130,7 @@ const Hero = () => {
         }} transition={{
           duration: 0.8,
           delay: 0.2
-        }} className="text-5xl md:text-7xl font-bold mb-6 leading-tight mt-8">
+        }} className="text-5xl md:text-7xl font-bold font-heading mb-6 leading-tight mt-8">
             Turn Lessons into{" "}
             <span className="text-gradient">Animated Explainers</span> — Instantly.
           </motion.h1>
@@ -135,7 +144,7 @@ const Hero = () => {
         }} transition={{
           duration: 0.8,
           delay: 0.4
-        }} className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+        }} className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
             Auto Animate helps educators, creators, and teams convert any lesson script into
             an AI-generated, animated explainer video — saving hours of editing while making
             learning more visual and engaging.
@@ -151,10 +160,10 @@ const Hero = () => {
           duration: 0.8,
           delay: 0.6
         }} className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={() => window.open("https://forms.gle/viHLngsQck1ZXv139", "_blank")} className="gradient-primary hover:opacity-90 transition-opacity text-lg px-8 py-6">
+            <Button size="lg" variant="glow" onClick={() => window.open("https://forms.gle/viHLngsQck1ZXv139", "_blank")} className="text-lg px-8 py-6 font-semibold">
               Join Beta
             </Button>
-            <Button size="lg" variant="outline" onClick={scrollToDemo} className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6">
+            <Button size="lg" variant="outline" onClick={scrollToDemo} className="text-lg px-8 py-6 font-semibold hover-lift">
               <Play className="mr-2" size={20} />
               Watch Demo
             </Button>
@@ -167,8 +176,9 @@ const Hero = () => {
         }} transition={{
           duration: 1,
           delay: 1
-        }} className="mt-16 text-sm text-muted-foreground">
-            Powered by generative AI • Built for educators
+        }} className="mt-16 text-sm text-muted-foreground flex items-center justify-center gap-3">
+            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span>Powered by generative AI • Built for educators</span>
           </motion.div>
         </div>
       </div>
@@ -187,10 +197,11 @@ const Hero = () => {
       }} transition={{
         duration: 1.5,
         repeat: Infinity
-      }} className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2">
+      }} className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2 glow-primary">
           <motion.div className="w-1.5 h-1.5 bg-primary rounded-full" />
         </motion.div>
       </motion.div>
     </section>;
 };
+
 export default Hero;

@@ -45,7 +45,7 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-24 bg-secondary/30">
+    <section id="pricing" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -54,7 +54,7 @@ const Pricing = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4">
             Simple Pricing, <span className="text-gradient">Big Impact</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

@@ -34,7 +34,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 overflow-hidden">
+    <section id="features" className="py-24 overflow-hidden relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -43,7 +43,7 @@ const Features = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4">
             What Makes Auto Animate <span className="text-gradient">Different</span>
           </h2>
         </motion.div>
