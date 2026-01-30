@@ -3,7 +3,7 @@ import { User } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-24">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -12,7 +12,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Meet the <span className="text-gradient">Founders</span>
           </h2>
         </motion.div>

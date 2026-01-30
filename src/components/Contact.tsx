@@ -4,8 +4,8 @@ import { Mail, ExternalLink } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="contact" className="py-24 bg-secondary/30">
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -13,7 +13,7 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Let's Build the Future of{" "}
             <span className="text-gradient">Learning Together</span>
           </h2>
@@ -26,9 +26,8 @@ const Contact = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              variant="glow"
               onClick={() => window.open("https://forms.gle/viHLngsQck1ZXv139", "_blank")}
-              className="font-semibold"
+              className="gradient-primary hover:opacity-90 transition-opacity"
             >
               <ExternalLink className="mr-2" size={20} />
               Join Beta List
@@ -39,7 +38,7 @@ const Contact = () => {
               onClick={() =>
                 (window.location.href = "mailto:javeria.hassan77@gmail.com")
               }
-              className="font-semibold hover-lift"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
               <Mail className="mr-2" size={20} />
               Get in Touch

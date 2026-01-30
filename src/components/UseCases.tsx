@@ -26,8 +26,8 @@ const useCases = [
 
 const UseCases = () => {
   return (
-    <section id="use-cases" className="py-24 relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="use-cases" className="py-24 bg-secondary/30">
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,9 +35,7 @@ const UseCases = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4">
-            Who It's <span className="text-gradient">For</span>
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Who It's For</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
@@ -50,13 +48,13 @@ const UseCases = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                whileHover={{ y: -10, scale: 1.05, transition: { duration: 0.2 } }}
-                className="glass rounded-2xl p-8 text-center hover:neon-border hover-lift group transition-all duration-300"
+                whileHover={{ y: -10, transition: { duration: 0.2 } }}
+                className="glass rounded-2xl p-8 text-center hover:shadow-2xl hover:border-primary/50 transition-all"
               >
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:animate-pulse-glow transition-all">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
                   <Icon className="text-primary" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold font-heading mb-3">{useCase.title}</h3>
+                <h3 className="text-xl font-semibold mb-3">{useCase.title}</h3>
                 <p className="text-muted-foreground">{useCase.description}</p>
               </motion.div>
             );

@@ -38,7 +38,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass shadow-lg border-b border-primary/20" : "bg-transparent"
+        isScrolled ? "glass shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4 md:py-4 pt-6">
@@ -47,7 +47,7 @@ const Header = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-2xl font-bold font-heading text-gradient"
+            className="text-2xl font-bold text-gradient"
           >
             Auto Animate
           </motion.div>
@@ -73,7 +73,7 @@ const Header = () => {
             >
               <Button
                 onClick={() => window.open("https://forms.gle/viHLngsQck1ZXv139", "_blank")}
-                variant="glow"
+                className="gradient-primary hover:opacity-90 transition-opacity"
               >
                 Join Beta
               </Button>
