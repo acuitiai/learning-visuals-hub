@@ -1,0 +1,1 @@
+{"type":"unauthorized","message":"Invalid API key format. Key must start with 'sk_' prefix.","details":"","props":{"source":"connectors_gateway"}}
