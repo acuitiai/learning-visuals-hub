@@ -39,7 +39,7 @@ const Footer = () => {
         }} transition={{
           delay: 0.4
         }} className="text-muted-foreground">
-            © 2025 Auto Animate. All rights reserved.
+            © {new Date().getFullYear()} Auto Animate. All rights reserved.
           </motion.p>
         </div>
       </div>
