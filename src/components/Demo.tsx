@@ -35,7 +35,7 @@ const Demo = () => {
         delay: 0.2
       }} className="max-w-5xl mx-auto">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border">
-            <video src="https://drive.google.com/uc?export=download&id=1FZDPFgpKnWfNg9rK_TMYezMwV9hoZ_av" className="w-full h-auto" controls autoPlay muted loop playsInline />
+            <video src="/videos/demo.mp4" className="w-full h-auto" autoPlay muted loop playsInline preload="auto" />
           </div>
 
           <motion.div initial={{
